@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        body {
+            font-size: large
+        }
+
+        header {
+            font-size: xx-large;
+            position: absolute;
+            left: 45%;
+            margin-right: -50%;
+            top: 40px;
+        }
+
+
+        nav {
+            border-bottom: 1px solid #E4E5E7;
+            padding-top: 17px;
+            padding-bottom: 15px;
+            background: #F7F9FA;
+            height: 60px;
+            color: #6A6C6F;
+        }
+
+        nav a {
+            margin-right: 1.5em;
+            display: inline-block;
+        }
+
+        nav form {
+            display: inline-block;
+            margin-left: 1.5em;
+        }
+
+        nav div {
+            width: 50%;
+            float: left;
+        }
+
+        nav div:last-child {
+            text-align: right;
+        }
+
+        nav div:last-child a {
+            margin-left: 1.5em;
+            margin-right: 0;
+        }
+
+        nav a.live {
+            color: #34495E;
+            cursor: default;
+        }
+
+        div.navigate {
+            width: 100%;
+            font-size: large;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+
+            top: 20%;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            visibility: visible;
+            display: flex;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            font-size: larger;
+            display: block;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        table {
+            background: white;
+            border: 1px solid #E4E5E7;
+            border-collapse: collapse;
+            width: 100%;
+            position: absolute;
+            top: 45%;
+        }
+
+        td,
+        th {
+            text-align: left;
+            padding: 9px 18px;
+            width: auto;
+        }
+
+
+        tr {
+            border-bottom: 1px solid #E4E5E7;
+        }
+
+        tr:nth-child(2n) {
+            background-color: #F7F9FA;
+        }
+
+
+        .login-page {
+            width: 360px;
+            padding: 8% 0 0;
+            position: absolute;
+            left: 35%;
+            top: 20%;
+        }
+
+        .form {
+            position: relative;
+            z-index: 1;
+            max-width: 360px;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+        }
+
+        .form input {
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .form button {
+            text-transform: uppercase;
+            outline: 0;
+            background: #6A6C6F;
+            width: 100%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .form button:hover,
+        .form button:active,
+        .form button:focus {
+            background: #404146;
+        }
+
+        .form .message {
+            margin: 15px 0 0;
+            color: #b3b3b3;
+            font-size: 12px;
+        }
+
+        .form .message a {
+            color: #6A6C6F;
+            text-decoration: none;
+        }
+
+        .form .register-form {
+            display: none;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .container:before,
+        .container:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container .info {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .container .info h1 {
+            margin: 0 0 15px;
+            padding: 0;
+            font-size: 36px;
+            font-weight: 300;
+            color: #1a1a1a;
+        }
+
+        .container .info span {
+            color: #4d4d4d;
+            font-size: 12px;
+        }
+
+        .container .info span a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .container .info span .fa {
+            color: #EF3B3A;
+        }
+
+        .former{
+            width:80%;
+            position:absolute;
+            left: 20%;
+            top:40%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+
+        .texter{
+            width: 35%;
+            height: 35px;
+        }
+
+        .subtext{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+
+
+        .drag-area{
+            border: 1px solid black;
+            height: 200px;
+            width: 730px;
+            border-radius: 5px;
+            background-color: rgba(0, 255, 255, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 30px;
+            color: rgb(4, 4, 4);
+        }
+
+
+
+
+        .container1{
+            position:absolute;
+            left:10%;
+            top: 40%;
+            width: 100%;
+            height: 60%;
+            display: flex;
+
+
+        }
+
+        .allinfo{
+            width: 40%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            margin-left: 70px;
+        }
+
+        .image{
+
+            width: 20%;
+            height: 40%;
+
+        }
+
+
+        .textinfo{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+
+            width: 50%;
+            height: 80%;
+            text-align: left;
+            margin: 20px 20px 20px 60px;
+        }
+
+        .headname{
+            position: relative;
+            font-size: 40px;
+            text-align: left;
+            color: #6A6C6F;
+            margin: 20px;
+            margin-left: 60px;
+
+        }
+        .description{
+            text-align: left;
+            width: 100%;
+            height: 100%;
+            word-break: break-all;
+            word-wrap: break-word;
+            margin-left: 60px;
+        }
+
+
+
+
+        .subbutton {
+            text-transform: uppercase;
+            outline: 0;
+            background: #6A6C6F;
+            width: 45%;
+            height: 20%;
+            border: 0;
+            padding: 15px;
+            color: #FFFFFF;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 40px 40px 40px 60px;
+        }
+
+        .subbutton:hover
+        {
+            background: #404146;
+        }
+
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+{{ range $key, $product := . }}
+<div><header left="40%">{{$product.Name}}</header></div>
+
+<div class="navigate"><nav>
+    <ul>
+        <li><a href="/hello">На главную</a></li>
+        <li><a href="/Category">Категории</a></li>
+        <li><a href="/registration">Регистрация</a></li>
+        <li><a href="/cart">Корзина</a></li>
+    </ul>
+</nav>
+</div>
+
+
+<div class="container1">
+    <img class="image"  src="static/{{$product.Picture}}">
+    <div class="allinfo">
+        <div class="textinfo">
+            Категория: <a href="/hello/{{$product.Category}}">{{$product.Category}}</a>
+        </div><div class="headname">
+        {{$product.Name}}
+    </div>
+        <div class="description">
+            {{$product.Description}}
+            <br>
+            <br>
+
+            Количество:<div id="amount">{{$product.Amount}}</div>
+
+            <br>
+            <br>
+            Цена:<br>{{$product.Price}}
+        </div>
+        <button class="subbutton" id="cartButton" onclick="AddToCard({{$product.Category}},{{$product.Id}},{{$product.Amount}})"  > Добавить в корзину</button>
+    </div>
+
+</div>
+
+<script>
+    var i=0
+    function ready() {
+        const button = document.getElementById('cartButton')
+        if ((document.cookie.match(/{{$product.Id}}=(.+?)(;|$)/)!=null)) {
+            let results = document.cookie.match(/{{$product.Id}}=(.+?)(;|$)/);
+            if (results[1]!=0) {
+                if (results[1]<0){
+                    button.innerText = "Добавить в корзину";
+                }else {
+                    button.innerText = "В корзине: " + results[1];
+                }
+            }else{
+                button.innerText = "Добавить в корзину";
+            }
+        }
+
+    }
+
+    document.addEventListener("DOMContentLoaded", ready);
+
+    function AddToCard(cat,id,amount) {
+        const button = document.getElementById('cartButton')
+        if ((document.cookie.match(/{{$product.Id}}=(.+?)(;|$)/)!=null)) {
+            let results = document.cookie.match(/{{$product.Id}}=(.+?)(;|$)/);
+            i=Number(results[1])
+
+        }
+        i=i+1
+
+        if(i>amount){
+            alert("недостаточно товара")
+        }else {
+            document.cookie=id+"="+i+";path=/;max-age=86400"
+
+            button.innerText="В корзине: "+i;
+            const req = new XMLHttpRequest();
+            const url = 'http://localhost:8080/hello' + '/' + cat + '/' + id + '/cart'
+            req.open("PUT", url);
+            req.send();
+
+
+        }
+    }
+
+
+</script>
+{{end}}
+</body>
+</html>
