@@ -5,8 +5,8 @@ import "fmt"
 const (
 	Host     = "localhost"
 	Port     = 5432
-	User     = "postgres"
-	Password = "royalflush228"
+	User     = "*"
+	Password = "*"
 	Dbname   = "postgres"
 )
 
